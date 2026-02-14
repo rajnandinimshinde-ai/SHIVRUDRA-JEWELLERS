@@ -83,8 +83,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* LEFT TEXT */
-
 .hero-left {
   max-width: 520px;
 }
@@ -109,6 +107,9 @@ body {
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -121,27 +122,7 @@ body {
   width: 380px;
 }
 
-/* RESPONSIVE */
-
-@media(max-width: 768px) {
-
-  .hero {
-    text-align: center;
-    justify-content: center;
-  }
-
-  .hero-right img {
-    width: 300px;
-    margin-top: 30px;
-  }
-
-  .search-box input {
-    width: 160px;
-  }
-
-}
-
-/* SHOP BUY COLLECTION */
+/* COLLECTION */
 
 .collection-section {
   padding: 50px 8%;
@@ -157,15 +138,11 @@ body {
   padding-bottom: 5px;
 }
 
-/* GRID */
-
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
-
-/* CARD */
 
 .collection-card {
   background: #f2f2f2;
@@ -177,11 +154,9 @@ body {
 }
 
 .collection-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
   box-shadow: 0 0 15px rgba(255,215,0,0.5);
 }
-
-/* IMAGE */
 
 .collection-card img {
   width: 100%;
@@ -190,15 +165,11 @@ body {
   border-radius: 15px;
 }
 
-/* TEXT */
-
 .collection-card p {
   margin-top: 10px;
   font-weight: bold;
   color: black;
 }
-
-/* VIEW BUTTON */
 
 .view-btn {
   text-align: center;
@@ -215,10 +186,10 @@ body {
 }
 
 .view-btn button:hover {
-  background: #ffcc00;
+  background: #d4af37;
 }
 
-/* FEATURED SECTION */
+/* FEATURED */
 
 .featured-section {
   padding: 50px 8%;
@@ -232,15 +203,11 @@ body {
   padding-bottom: 5px;
 }
 
-/* GRID */
-
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
-
-/* CARD */
 
 .featured-card {
   background: #f2f2f2;
@@ -251,11 +218,9 @@ body {
 }
 
 .featured-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
   box-shadow: 0 0 15px rgba(255,215,0,0.5);
 }
-
-/* IMAGE */
 
 .featured-card img {
   width: 100%;
@@ -264,14 +229,10 @@ body {
   border-radius: 15px;
 }
 
-/* RATING */
-
 .rating {
   color: gold;
   margin: 8px 0 5px;
 }
-
-/* TEXT */
 
 .featured-card h4 {
   color: black;
@@ -285,23 +246,7 @@ body {
   font-size: 14px;
 }
 
-/* RESPONSIVE */
-
-@media(max-width: 768px) {
-
-  .featured-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-/* WHY CHOOSE US */
-
-.why-section {
-  padding: 50px 8%;
-}
-
-.why-title {
+.section-heading {
   font-size: 22px;
   margin-bottom: 25px;
   border-bottom: 2px solid gold;
@@ -309,75 +254,78 @@ body {
   padding-bottom: 5px;
 }
 
-/* GRID */
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-/* CARD */
-
-.why-card {
-  border: 2px solid gold;
-  border-radius: 20px;
-  padding: 20px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.why-card h4 {
+/* WHY SECTION */
+.why-section {
+  padding: 60px 8%;
+  background: #000;
   color: white;
-  margin-bottom: 6px;
 }
 
-.why-card p {
-  color: #ccc;
-  font-size: 14px;
-}
-
-/* ICON */
-
-.why-icon {
-  font-size: 35px;
-  color: gold;
-}
-
-
-/* APP DOWNLOAD */
-
-.app-section {
-  padding: 50px 8%;
-}
-
-.app-title {
+.section-heading {
   font-size: 22px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: 2px solid gold;
   display: inline-block;
   padding-bottom: 5px;
 }
 
-.app-box {
-  border: 2px solid gold;
-  border-radius: 25px;
-  padding: 20px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.why-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
-/* LEFT */
+.why-card {
+  border: 2px solid gold;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background: #000;
+  transition: 0.3s ease;
+}
+
+.why-icon {
+  font-size: 28px;
+  color: gold;
+}
+
+.why-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+/* APP SECTION */
+
+.app-section {
+  padding: 50px 8%;
+}
+
+.app-container {
+  border: 2px solid gold;
+  border-radius: 30px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+}
 
 .app-left {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
-.app-left h4 {
+.app-icon {
+  font-size: 40px;
+  color: gold;
+}
+
+.app-left h3 {
+  color: white;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 
@@ -386,41 +334,20 @@ body {
   font-size: 14px;
 }
 
-.app-icon {
-  font-size: 35px;
-  color: gold;
-}
+/* DOWNLOAD BUTTON */
 
-/* BUTTON */
-
-.app-btn {
+.download-btn {
   background: gold;
-  border: none;
+  color: black;
   padding: 10px 25px;
-  border-radius: 20px;
+  border-radius: 25px;
+  text-decoration: none;
   font-weight: bold;
-  cursor: pointer;
+  font-size: 14px;
 }
 
-.app-btn:hover {
-  background: #ffcc00;
-}
-
-
-/* RESPONSIVE */
-
-@media(max-width: 768px) {
-
-  .why-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .app-box {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
+.download-btn:hover {
+  background: #d4af37;
 }
 
 /* FOOTER */
@@ -430,28 +357,14 @@ body {
   padding-top: 40px;
 }
 
-/* SHOP NOW BUTTON */
-
 .footer-btn-box {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.shop-btn {
-  background: gold;
-  border: none;
-  padding: 8px 25px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
+.footer .btn {
+  color: black;
 }
-
-.shop-btn:hover {
-  background: #ffcc00;
-}
-
-
-/* FOOTER CONTENT */
 
 .footer-container {
   display: flex;
@@ -459,13 +372,10 @@ body {
   padding: 20px 8%;
 }
 
-/* FOOTER BOX */
-
 .footer-box h3 {
   color: white;
   margin-bottom: 18px;
 }
-
 
 .footer-box ul {
   list-style: disc;
@@ -474,18 +384,23 @@ body {
 
 .footer-box ul li {
   color: #ccc;
-  margin-bottom: 12px;   
+  margin-bottom: 12px;
   font-size: 14px;
-  cursor: pointer;
-  line-height: 1.8;     
+  line-height: 1.8;
 }
 
-.footer-box ul li:hover {
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: black;
+}
+
+.footer-box ul li a:hover {
   color: gold;
 }
-
-
-/* COPYRIGHT */
 
 .footer-bottom {
   text-align: center;
@@ -497,24 +412,4 @@ body {
   color: white;
   font-size: 14px;
   padding-top: 8px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-
-  .footer-container {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .footer-box {
-    text-align: center;
-  }
-
-  .footer-box ul {
-    list-style-position: inside;
-    padding-left: 0;
-  }
-
 }
